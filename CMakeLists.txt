@@ -6,7 +6,7 @@ file(GLOB SRC "*.c" "*.h")
 list(SORT SRC)
 
 add_library(xdifflib ${SRC})
-set_target_properties(xdifflib PROPERTIES CXX_EXTENSIONS OFF)
+set_target_properties(xdifflib PROPERTIES C_EXTENSIONS OFF)
 
 add_library(xdiff INTERFACE)
 target_link_libraries(xdiff INTERFACE xdifflib)
