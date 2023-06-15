@@ -9,4 +9,4 @@ add_library(xdifflib ${SRC})
 
 add_library(xdiff INTERFACE)
 target_link_libraries(xdiff INTERFACE xdifflib)
-target_include_directories(xdiff INTERFACE ${CMAKE_PROJECT_DIR})
+target_include_directories(xdiff INTERFACE ${PROJECT_SOURCE_DIR})
