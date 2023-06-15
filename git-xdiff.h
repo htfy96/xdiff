@@ -18,17 +18,6 @@
 #include <string.h>
 #include <regex.h>
 
-/* Work around C90-conformance issues */
-#if !defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L)
-# if defined(_MSC_VER)
-#  define inline __inline
-# elif defined(__GNUC__)
-#  define inline __inline__
-# else
-#  define inline
-# endif
-#endif
-
 #if defined(__GNUC__) && defined(__GNUC_MINOR__) && \
     ((__GNUC__ << 16) + __GNUC_MINOR__ >= (4 << 16) + 5)
 # define XDL_UNUSED __attribute__((unused)) \
