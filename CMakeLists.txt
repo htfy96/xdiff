@@ -5,6 +5,8 @@ project(xdiff VERSION "0.1" LANGUAGES C)
 file(GLOB SRC "*.c" "*.h")
 list(SORT SRC)
 
-add_library(xdiff OBJECT ${SRC})
+add_library(xdifflib ${SRC})
 
-target_include_directories(xdiff PUBLIC ${CMAKE_PROJECT_DIR})
+add_library(xdiff INTERFACE)
+target_link_libraries(xdiff INTERFACE xdifflib)
+target_include_directories(xdiff INTERFACE ${CMAKE_PROJECT_DIR})
