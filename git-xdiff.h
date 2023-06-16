@@ -39,7 +39,7 @@
 #define xdl_regex_t regex_t
 #define xdl_regmatch_t regmatch_t
 
-inline int xdl_regexec_buf(
+static inline int xdl_regexec_buf(
 	const xdl_regex_t *preg, const char *buf, size_t size,
 	size_t nmatch, xdl_regmatch_t pmatch[], int eflags)
 {
